@@ -1,0 +1,8 @@
+
+ 
+记录时间：2015-05-17 11:02:02,838 
+线程ID:[6] 
+日志级别：  ERROR 
+出错类：System.String property: [(null)] - 
+错误描述：this is a testLogin
+ 

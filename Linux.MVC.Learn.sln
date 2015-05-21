@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linux.MVC.Learn", "Linux.MVC.Learn\Linux.MVC.Learn.csproj", "{830EFC90-B991-48D0-A8A2-0D86F659697D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linux.MVC.Learn.Model", "Linux.MVC.Learn.Model\Linux.MVC.Learn.Model.csproj", "{9D21F6C9-8457-4732-92A6-9B51CD78D164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linux.MVC.Learn.Common", "Linux.MVC.Learn.Common\Linux.MVC.Learn.Common.csproj", "{94B29AE1-AF4A-447E-B634-B10AC8F00E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linux.MVC.Learn.DDL", "Linux.MVC.Learn.DDL\Linux.MVC.Learn.DDL.csproj", "{CF015F06-045B-4BD4-8197-978CF1A8820F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{830EFC90-B991-48D0-A8A2-0D86F659697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830EFC90-B991-48D0-A8A2-0D86F659697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830EFC90-B991-48D0-A8A2-0D86F659697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830EFC90-B991-48D0-A8A2-0D86F659697D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D21F6C9-8457-4732-92A6-9B51CD78D164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D21F6C9-8457-4732-92A6-9B51CD78D164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D21F6C9-8457-4732-92A6-9B51CD78D164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D21F6C9-8457-4732-92A6-9B51CD78D164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B29AE1-AF4A-447E-B634-B10AC8F00E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B29AE1-AF4A-447E-B634-B10AC8F00E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B29AE1-AF4A-447E-B634-B10AC8F00E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B29AE1-AF4A-447E-B634-B10AC8F00E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF015F06-045B-4BD4-8197-978CF1A8820F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF015F06-045B-4BD4-8197-978CF1A8820F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF015F06-045B-4BD4-8197-978CF1A8820F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF015F06-045B-4BD4-8197-978CF1A8820F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://lishjun01.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Linux.MVC.Learn.Common\\Linux.MVC.Learn.Common.csproj
+		SccProjectName1 = Linux.MVC.Learn.Common
+		SccLocalPath1 = Linux.MVC.Learn.Common
+		SccProjectUniqueName2 = Linux.MVC.Learn.Model\\Linux.MVC.Learn.Model.csproj
+		SccProjectName2 = Linux.MVC.Learn.Model
+		SccLocalPath2 = Linux.MVC.Learn.Model
+		SccProjectUniqueName3 = Linux.MVC.Learn\\Linux.MVC.Learn.csproj
+		SccProjectName3 = Linux.MVC.Learn
+		SccLocalPath3 = Linux.MVC.Learn
+		SccProjectUniqueName4 = Linux.MVC.Learn.DDL\\Linux.MVC.Learn.DDL.csproj
+		SccProjectName4 = Linux.MVC.Learn.DDL
+		SccLocalPath4 = Linux.MVC.Learn.DDL
+	EndGlobalSection
+EndGlobal

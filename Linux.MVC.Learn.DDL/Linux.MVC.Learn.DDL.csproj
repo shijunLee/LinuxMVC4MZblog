@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF015F06-045B-4BD4-8197-978CF1A8820F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Linux.MVC.Learn.DDL</RootNamespace>
+    <AssemblyName>Linux.MVC.Learn.DDL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkdownSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingModel\AllBlogCommentsBindingModel.cs" />
+    <Compile Include="BindingModel\AllBlogPostsBindingModel.cs" />
+    <Compile Include="BindingModel\AllStatisticsBindingModel.cs" />
+    <Compile Include="BindingModel\BlogPostDetailsBindingModel.cs" />
+    <Compile Include="BindingModel\BlogPostEditBindingModel.cs" />
+    <Compile Include="BindingModel\RecentBlogPostsBindingModel.cs" />
+    <Compile Include="BindingModel\RecentBlogPostSummaryBindingModel.cs" />
+    <Compile Include="BindingModel\TagCloudBindingModel.cs" />
+    <Compile Include="BindingModel\TaggedBlogPostsBindingModel.cs" />
+    <Compile Include="BlogManager\BlogCommentManage.cs" />
+    <Compile Include="BlogManager\BlogPostManager.cs" />
+    <Compile Include="BlogManager\BlogTagManage.cs" />
+    <Compile Include="BlogManager\HomeMainManager.cs" />
+    <Compile Include="BlogManager\ISpamShieldService.cs" />
+    <Compile Include="BlogManager\ObjectId.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommandModel\EditPostCommand.cs" />
+    <Compile Include="CommandModel\NewCommentCommand.cs" />
+    <Compile Include="CommandModel\NewPostCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BlogManager\AdminIndex.cs" />
+    <Compile Include="UserManager\UserManager.cs" />
+    <Compile Include="ViewModel\AllBlogCommentsViewModel.cs" />
+    <Compile Include="ViewModel\AllBlogPostsViewModel.cs" />
+    <Compile Include="ViewModel\AllStatisticsViewModel.cs" />
+    <Compile Include="ViewModel\BlogPostDetailsViewModel.cs" />
+    <Compile Include="ViewModel\BlogTagViewModel.cs" />
+    <Compile Include="ViewModel\RecentBlogPostSummaryViewModel.cs" />
+    <Compile Include="ViewModel\RecentBlogPostsViewModel.cs" />
+    <Compile Include="ViewModel\TagCloudViewModel.cs" />
+    <Compile Include="ViewModel\TaggedBlogPostsViewModel.cs" />
+    <Compile Include="ViewModel\ViewMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Linux.MVC.Learn.Common\Linux.MVC.Learn.Common.csproj">
+      <Project>{94b29ae1-af4a-447e-b634-b10ac8f00e90}</Project>
+      <Name>Linux.MVC.Learn.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Linux.MVC.Learn.Model\Linux.MVC.Learn.Model.csproj">
+      <Project>{9d21f6c9-8457-4732-92a6-9b51cd78d164}</Project>
+      <Name>Linux.MVC.Learn.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

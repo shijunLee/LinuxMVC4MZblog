@@ -1,0 +1,1034 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{830EFC90-B991-48D0-A8A2-0D86F659697D}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Linux.MVC.Learn</RootNamespace>
+    <AssemblyName>Linux.MVC.Learn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MySql.Data.6.9.6\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.6\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BlogCommentController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\BlogTagController.cs" />
+    <Compile Include="Controllers\FrontBaseController.cs" />
+    <Compile Include="Controllers\WebApiController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalFilter\WebAppFilter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\css\admin.css" />
+    <Content Include="Content\css\admin.min.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\mzblog.css" />
+    <Content Include="Content\css\mzblog.min.css" />
+    <Content Include="Content\css\sb-admin.css" />
+    <Content Include="Content\css\sb-admin.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Highlight\arta.css" />
+    <Content Include="Content\Highlight\ascetic.css" />
+    <Content Include="Content\Highlight\brown_paper.css" />
+    <Content Include="Content\Highlight\brown_papersq.png" />
+    <Content Include="Content\Highlight\dark.css" />
+    <Content Include="Content\Highlight\default.css" />
+    <Content Include="Content\Highlight\far.css" />
+    <Content Include="Content\Highlight\github.css" />
+    <Content Include="Content\Highlight\googlecode.css" />
+    <Content Include="Content\Highlight\idea.css" />
+    <Content Include="Content\Highlight\ir_black.css" />
+    <Content Include="Content\Highlight\magula.css" />
+    <Content Include="Content\Highlight\monokai.css" />
+    <Content Include="Content\Highlight\pojoaque.css" />
+    <Content Include="Content\Highlight\pojoaque.jpg" />
+    <Content Include="Content\Highlight\rainbow.css" />
+    <Content Include="Content\Highlight\school_book.css" />
+    <Content Include="Content\Highlight\school_book.png" />
+    <Content Include="Content\Highlight\solarized_dark.css" />
+    <Content Include="Content\Highlight\solarized_light.css" />
+    <Content Include="Content\Highlight\sunburst.css" />
+    <Content Include="Content\Highlight\tomorrow-night-blue.css" />
+    <Content Include="Content\Highlight\tomorrow-night-bright.css" />
+    <Content Include="Content\Highlight\tomorrow-night-eighties.css" />
+    <Content Include="Content\Highlight\tomorrow-night.css" />
+    <Content Include="Content\Highlight\tomorrow.css" />
+    <Content Include="Content\Highlight\vs.css" />
+    <Content Include="Content\Highlight\xcode.css" />
+    <Content Include="Content\Highlight\zenburn.css" />
+    <Content Include="Content\images\ymz.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\editor\asp.net\bin\LitJSON.dll" />
+    <Content Include="Scripts\editor\asp.net\demo.aspx" />
+    <Content Include="Scripts\editor\asp.net\README.txt" />
+    <Content Include="Scripts\editor\changelog.txt" />
+    <Content Include="Scripts\editor\docs\_static\file.png" />
+    <Content Include="Scripts\editor\docs\_static\firebug_upload_json.gif" />
+    <Content Include="Scripts\editor\docs\_templates\classy\layout.html" />
+    <Content Include="Scripts\editor\Gruntfile.js" />
+    <Content Include="Scripts\editor\kindeditor-all-min.js" />
+    <Content Include="Scripts\editor\kindeditor-all.js" />
+    <Content Include="Scripts\editor\lang\ar.js" />
+    <Content Include="Scripts\editor\lang\en.js" />
+    <Content Include="Scripts\editor\lang\ko.js" />
+    <Content Include="Scripts\editor\lang\ru.js" />
+    <Content Include="Scripts\editor\lang\zh-CN.js" />
+    <Content Include="Scripts\editor\lang\zh-TW.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\background.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\contentScript.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug-lite-beta.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug.jpg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug128.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug16.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug24.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug24_disabled.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug32.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\firebug48.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\googleChrome.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\license.txt" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\blank.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\buttonBg.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\buttonBgHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\detach.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\detachHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\disable.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\disable.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\disableHover.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\disableHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\down.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\downActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\downHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\errorIcon-sm.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\errorIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\errorIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\firebug-1.3a2.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\firebug.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\firebug.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\firebug.IE6.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\firebug.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\group.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\infoIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\infoIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\loading_16.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\min.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\minHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\off.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\offHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\pixel_transparent.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\roundCorner.svg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\search.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\search.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\shadow.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\shadow2.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\shadowAlpha.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\sprite.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabHoverLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabHoverMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabHoverRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabMenuCheckbox.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabMenuPin.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabMenuRadio.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabMenuTarget.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabMenuTargetHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tabRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\textEditorBorders.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\textEditorBorders.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\textEditorCorners.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\textEditorCorners.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\titlebarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\toolbarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tree_close.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\tree_open.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\up.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\upActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\upHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\warningIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\skin\xp\warningIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\background.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\contentScript.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug-lite.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug.jpg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug128.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug16.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug24.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug24_disabled.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug32.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\firebug48.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\googleChrome.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\license.txt" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\blank.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\buttonBg.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\buttonBgHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\detach.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\detachHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\disable.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\disable.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\disableHover.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\disableHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\down.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\downActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\downHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\errorIcon-sm.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\errorIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\errorIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\firebug-1.3a2.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\firebug.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\firebug.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\firebug.IE6.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\firebug.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\group.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\infoIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\infoIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\loading_16.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\min.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\minHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\off.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\offHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\pixel_transparent.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\roundCorner.svg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\search.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\search.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\shadow.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\shadow2.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\shadowAlpha.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\sprite.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabHoverLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabHoverMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabHoverRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabMenuCheckbox.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabMenuPin.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabMenuRadio.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabMenuTarget.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabMenuTargetHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tabRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\textEditorBorders.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\textEditorBorders.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\textEditorCorners.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\textEditorCorners.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\titlebarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\toolbarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tree_close.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\tree_open.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\up.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\upActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\upHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\warningIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\skin\xp\warningIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\firebug-lite-beta.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\firebug-lite-debug.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\firebug-lite.js" />
+    <Content Include="Scripts\editor\lib\firebug-lite\license.txt" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\blank.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\buttonBg.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\buttonBgHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\detach.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\detachHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\disable.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\disable.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\disableHover.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\disableHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\down.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\downActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\downHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\errorIcon-sm.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\errorIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\errorIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\firebug.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\firebug.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\firebug.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\group.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\infoIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\infoIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\loading_16.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\min.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\minHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\off.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\offHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\pixel_transparent.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\roundCorner.svg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\search.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\search.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\shadow.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\shadow2.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\shadowAlpha.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\sprite.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabHoverLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabHoverMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabHoverRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabMenuCheckbox.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabMenuPin.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabMenuRadio.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabMenuTarget.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabMenuTargetHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tabRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\textEditorBorders.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\textEditorBorders.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\textEditorCorners.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\textEditorCorners.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\titlebarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\toolbarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tree_close.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\tree_open.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\twistyClosed.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\twistyOpen.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\up.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\upActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\upHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\warningIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\classic\warningIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\blank.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\buttonBg.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\buttonBgHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\close.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\closeHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\detach.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\detachHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\disable.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\disable.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\disableHover.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\disableHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\down.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\downActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\downHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\errorIcon-sm.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\errorIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\errorIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\firebug.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\firebug.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\firebug.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\group.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\infoIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\infoIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\loading_16.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\min.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\minHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\off.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\offHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\pixel_transparent.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\roundCorner.svg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\search.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\search.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\shadow.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\shadow2.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\shadowAlpha.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\sprite.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabHoverLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabHoverMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabHoverRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabMenuCheckbox.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabMenuPin.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabMenuRadio.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabMenuTarget.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabMenuTargetHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tabRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\textEditorBorders.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\textEditorBorders.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\textEditorCorners.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\textEditorCorners.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\titlebarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\toolbarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tree_close.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\tree_open.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\twistyClosed.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\twistyOpen.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\up.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\upActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\upHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\warningIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\light\warningIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\blank.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\buttonBg.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\buttonBgHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\detach.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\detachHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\disable.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\disable.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\disableHover.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\disableHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\down.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\downActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\downHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\errorIcon-sm.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\errorIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\errorIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\firebug-1.3a2.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\firebug.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\firebug.html" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\firebug.IE6.css" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\firebug.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\group.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\infoIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\infoIcon.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\loading_16.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\min.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\minHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\off.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\offHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\pixel_transparent.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\roundCorner.svg" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\search.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\search.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\shadow.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\shadow2.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\shadowAlpha.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\sprite.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabHoverLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabHoverMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabHoverRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabLeft.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabMenuCheckbox.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabMenuPin.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabMenuRadio.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabMenuTarget.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabMenuTargetHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tabRight.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\textEditorBorders.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\textEditorBorders.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\textEditorCorners.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\textEditorCorners.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\titlebarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\toolbarMid.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tree_close.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\tree_open.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\up.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\upActive.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\upHover.png" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\warningIcon.gif" />
+    <Content Include="Scripts\editor\lib\firebug-lite\skin\xp\warningIcon.png" />
+    <Content Include="Scripts\editor\lib\jquery.min.js" />
+    <Content Include="Scripts\editor\lib\qunit\qunit.css" />
+    <Content Include="Scripts\editor\lib\qunit\qunit.js" />
+    <Content Include="Scripts\editor\license.txt" />
+    <Content Include="Scripts\editor\plugins\anchor\anchor.js" />
+    <Content Include="Scripts\editor\plugins\autoheight\autoheight.js" />
+    <Content Include="Scripts\editor\plugins\baidumap\baidumap.js" />
+    <Content Include="Scripts\editor\plugins\baidumap\index.html" />
+    <Content Include="Scripts\editor\plugins\baidumap\map.html" />
+    <Content Include="Scripts\editor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Scripts\editor\plugins\code\code.js" />
+    <Content Include="Scripts\editor\plugins\code\prettify.css" />
+    <Content Include="Scripts\editor\plugins\code\prettify.js" />
+    <Content Include="Scripts\editor\plugins\emoticons\emoticons.js" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\0.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\1.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\10.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\100.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\101.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\102.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\103.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\104.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\105.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\106.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\107.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\108.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\109.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\11.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\110.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\111.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\112.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\113.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\114.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\115.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\116.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\117.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\118.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\119.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\12.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\120.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\121.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\122.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\123.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\124.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\125.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\126.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\127.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\128.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\129.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\13.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\130.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\131.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\132.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\133.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\134.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\14.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\15.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\16.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\17.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\18.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\19.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\2.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\20.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\21.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\22.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\23.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\24.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\25.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\26.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\27.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\28.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\29.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\3.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\30.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\31.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\32.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\33.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\34.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\35.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\36.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\37.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\38.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\39.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\4.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\40.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\41.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\42.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\43.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\44.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\45.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\46.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\47.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\48.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\49.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\5.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\50.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\51.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\52.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\53.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\54.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\55.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\56.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\57.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\58.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\59.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\6.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\60.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\61.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\62.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\63.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\64.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\65.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\66.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\67.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\68.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\69.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\7.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\70.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\71.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\72.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\73.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\74.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\75.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\76.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\77.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\78.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\79.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\8.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\80.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\81.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\82.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\83.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\84.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\85.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\86.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\87.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\88.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\89.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\9.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\90.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\91.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\92.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\93.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\94.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\95.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\96.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\97.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\98.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\99.gif" />
+    <Content Include="Scripts\editor\plugins\emoticons\images\static.gif" />
+    <Content Include="Scripts\editor\plugins\filemanager\filemanager.js" />
+    <Content Include="Scripts\editor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Scripts\editor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Scripts\editor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Scripts\editor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Scripts\editor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Scripts\editor\plugins\fixtoolbar\fixtoolbar.js" />
+    <Content Include="Scripts\editor\plugins\flash\flash.js" />
+    <Content Include="Scripts\editor\plugins\image\image.js" />
+    <Content Include="Scripts\editor\plugins\image\images\align_left.gif" />
+    <Content Include="Scripts\editor\plugins\image\images\align_right.gif" />
+    <Content Include="Scripts\editor\plugins\image\images\align_top.gif" />
+    <Content Include="Scripts\editor\plugins\image\images\refresh.png" />
+    <Content Include="Scripts\editor\plugins\insertfile\insertfile.js" />
+    <Content Include="Scripts\editor\plugins\lineheight\lineheight.js" />
+    <Content Include="Scripts\editor\plugins\link\link.js" />
+    <Content Include="Scripts\editor\plugins\map\map.html" />
+    <Content Include="Scripts\editor\plugins\map\map.js" />
+    <Content Include="Scripts\editor\plugins\media\media.js" />
+    <Content Include="Scripts\editor\plugins\multiimage\images\image.png" />
+    <Content Include="Scripts\editor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Scripts\editor\plugins\multiimage\images\select-files-zh-CN.png" />
+    <Content Include="Scripts\editor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Scripts\editor\plugins\multiimage\multiimage.js" />
+    <Content Include="Scripts\editor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Scripts\editor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Scripts\editor\plugins\preview\preview.js" />
+    <Content Include="Scripts\editor\plugins\quickformat\quickformat.js" />
+    <Content Include="Scripts\editor\plugins\table\table.js" />
+    <Content Include="Scripts\editor\plugins\template\html\1.html" />
+    <Content Include="Scripts\editor\plugins\template\html\2.html" />
+    <Content Include="Scripts\editor\plugins\template\html\3.html" />
+    <Content Include="Scripts\editor\plugins\template\template.js" />
+    <Content Include="Scripts\editor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Scripts\editor\src\ajax.js" />
+    <Content Include="Scripts\editor\src\cmd.js" />
+    <Content Include="Scripts\editor\src\colorpicker.js" />
+    <Content Include="Scripts\editor\src\config.js" />
+    <Content Include="Scripts\editor\src\core.js" />
+    <Content Include="Scripts\editor\src\dialog.js" />
+    <Content Include="Scripts\editor\src\edit.js" />
+    <Content Include="Scripts\editor\src\event.js" />
+    <Content Include="Scripts\editor\src\footer.js" />
+    <Content Include="Scripts\editor\src\header.js" />
+    <Content Include="Scripts\editor\src\html.js" />
+    <Content Include="Scripts\editor\src\main.js" />
+    <Content Include="Scripts\editor\src\menu.js" />
+    <Content Include="Scripts\editor\src\node.js" />
+    <Content Include="Scripts\editor\src\range.js" />
+    <Content Include="Scripts\editor\src\selector.js" />
+    <Content Include="Scripts\editor\src\tabs.js" />
+    <Content Include="Scripts\editor\src\toolbar.js" />
+    <Content Include="Scripts\editor\src\uploadbutton.js" />
+    <Content Include="Scripts\editor\src\widget.js" />
+    <Content Include="Scripts\editor\test\ajax.html" />
+    <Content Include="Scripts\editor\test\cmd.html" />
+    <Content Include="Scripts\editor\test\cmd.js" />
+    <Content Include="Scripts\editor\test\core.html" />
+    <Content Include="Scripts\editor\test\core.js" />
+    <Content Include="Scripts\editor\test\data\logo_180_30.gif" />
+    <Content Include="Scripts\editor\test\dialog.html" />
+    <Content Include="Scripts\editor\test\edit.html" />
+    <Content Include="Scripts\editor\test\edit.js" />
+    <Content Include="Scripts\editor\test\editor.html" />
+    <Content Include="Scripts\editor\test\editor.js" />
+    <Content Include="Scripts\editor\test\event.html" />
+    <Content Include="Scripts\editor\test\event.js" />
+    <Content Include="Scripts\editor\test\frame.html" />
+    <Content Include="Scripts\editor\test\hidden.html" />
+    <Content Include="Scripts\editor\test\html.html" />
+    <Content Include="Scripts\editor\test\html.js" />
+    <Content Include="Scripts\editor\test\index.html" />
+    <Content Include="Scripts\editor\test\leak.html" />
+    <Content Include="Scripts\editor\test\main.html" />
+    <Content Include="Scripts\editor\test\menu.html" />
+    <Content Include="Scripts\editor\test\menu.js" />
+    <Content Include="Scripts\editor\test\navi.html" />
+    <Content Include="Scripts\editor\test\node.html" />
+    <Content Include="Scripts\editor\test\node.js" />
+    <Content Include="Scripts\editor\test\quirkmode.html" />
+    <Content Include="Scripts\editor\test\range.html" />
+    <Content Include="Scripts\editor\test\range.js" />
+    <Content Include="Scripts\editor\test\remote.html" />
+    <Content Include="Scripts\editor\test\selector.html" />
+    <Content Include="Scripts\editor\test\selector.js" />
+    <Content Include="Scripts\editor\test\tabs.html" />
+    <Content Include="Scripts\editor\test\total.html" />
+    <Content Include="Scripts\editor\test\widget.html" />
+    <Content Include="Scripts\editor\themes\common\anchor.gif" />
+    <Content Include="Scripts\editor\themes\common\blank.gif" />
+    <Content Include="Scripts\editor\themes\common\flash.gif" />
+    <Content Include="Scripts\editor\themes\common\loading.gif" />
+    <Content Include="Scripts\editor\themes\common\media.gif" />
+    <Content Include="Scripts\editor\themes\common\rm.gif" />
+    <Content Include="Scripts\editor\themes\default\background.png" />
+    <Content Include="Scripts\editor\themes\default\default.css" />
+    <Content Include="Scripts\editor\themes\default\default.png" />
+    <Content Include="Scripts\editor\themes\fonts\kindeditor.svg" />
+    <Content Include="Scripts\editor\themes\simple\simple.css" />
+    <Content Include="Scripts\Highlight\highlight.pack.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\editor\.gitignore" />
+    <Content Include="Scripts\editor\asp.net\file_manager_json.ashx" />
+    <Content Include="Scripts\editor\asp.net\upload_json.ashx" />
+    <Content Include="Scripts\editor\docs\ajax.rst" />
+    <Content Include="Scripts\editor\docs\changelog.rst" />
+    <Content Include="Scripts\editor\docs\classyext.py" />
+    <Content Include="Scripts\editor\docs\classyext.pyc" />
+    <Content Include="Scripts\editor\docs\cmd.rst" />
+    <Content Include="Scripts\editor\docs\colorpicker.rst" />
+    <Content Include="Scripts\editor\docs\conf.py" />
+    <Content Include="Scripts\editor\docs\core.rst" />
+    <Content Include="Scripts\editor\docs\dialog.rst" />
+    <Content Include="Scripts\editor\docs\editor.rst" />
+    <Content Include="Scripts\editor\docs\event.rst" />
+    <Content Include="Scripts\editor\docs\index.rst" />
+    <Content Include="Scripts\editor\docs\make.bat" />
+    <Content Include="Scripts\editor\docs\Makefile" />
+    <Content Include="Scripts\editor\docs\menu.rst" />
+    <Content Include="Scripts\editor\docs\node.rst" />
+    <Content Include="Scripts\editor\docs\option.rst" />
+    <Content Include="Scripts\editor\docs\plugin.rst" />
+    <Content Include="Scripts\editor\docs\qna.rst" />
+    <Content Include="Scripts\editor\docs\range.rst" />
+    <Content Include="Scripts\editor\docs\selector.rst" />
+    <Content Include="Scripts\editor\docs\tabs.rst" />
+    <Content Include="Scripts\editor\docs\theme.rst" />
+    <Content Include="Scripts\editor\docs\upgrade.rst" />
+    <Content Include="Scripts\editor\docs\upload.rst" />
+    <Content Include="Scripts\editor\docs\uploadbutton.rst" />
+    <Content Include="Scripts\editor\docs\usage.rst" />
+    <Content Include="Scripts\editor\docs\widget.rst" />
+    <Content Include="Scripts\editor\docs\_templates\classy\static\classy.css_t" />
+    <Content Include="Scripts\editor\docs\_templates\classy\theme.conf" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\.htaccess" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\build.bat" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension-beta\manifest.json" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\chrome-extension\manifest.json" />
+    <Content Include="Scripts\editor\lib\firebug-lite\build\compress.bat" />
+    <Content Include="Scripts\editor\lib\firebug-lite\plugin\proxy\proxy.php" />
+    <Content Include="Scripts\editor\package.json" />
+    <Content Include="Scripts\editor\README.md" />
+    <Content Include="Scripts\editor\test\webdriver\all-chrome.bat" />
+    <Content Include="Scripts\editor\test\webdriver\all-firefox.bat" />
+    <Content Include="Scripts\editor\test\webdriver\all-ie.bat" />
+    <Content Include="Scripts\editor\test\webdriver\all.php" />
+    <Content Include="Scripts\editor\test\webdriver\KindEditorDriver.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\README.md" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriver.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverBase.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverContainer.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverElement.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverEnvironment.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverExceptions.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverSession.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\WebDriverSimpleItem.php" />
+    <Content Include="Scripts\editor\test\webdriver\php-webdriver\__init__.php" />
+    <Content Include="Scripts\editor\test\webdriver\test-default.php" />
+    <Content Include="Scripts\editor\test\webdriver\test-dialog.php" />
+    <Content Include="Scripts\editor\test\webdriver\test-unittest.php" />
+    <Content Include="Scripts\editor\themes\fonts\kindeditor.eot" />
+    <Content Include="Scripts\editor\themes\fonts\kindeditor.ttf" />
+    <Content Include="Scripts\editor\themes\fonts\kindeditor.woff" />
+    <None Include="Scripts\jquery-1.11.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.2.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\jquery.tagsinput.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\markdown.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Shared\_AboutMe.cshtml" />
+    <Content Include="Views\Shared\_Links.cshtml" />
+    <Content Include="Views\Home\Main.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\BlogPost\GetList.cshtml" />
+    <Content Include="Views\BlogPost\Edit.cshtml" />
+    <Content Include="Views\BlogPost\NewPost.cshtml" />
+    <Content Include="Views\BlogComment\GetList.cshtml" />
+    <Content Include="Views\BlogTag\GetList.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Tag.cshtml" />
+    <Content Include="Views\Home\KinderEditerTest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Linux.MVC.Learn.Common\Linux.MVC.Learn.Common.csproj">
+      <Project>{94b29ae1-af4a-447e-b634-b10ac8f00e90}</Project>
+      <Name>Linux.MVC.Learn.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Linux.MVC.Learn.DDL\Linux.MVC.Learn.DDL.csproj">
+      <Project>{cf015f06-045b-4bd4-8197-978cf1a8820f}</Project>
+      <Name>Linux.MVC.Learn.DDL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Linux.MVC.Learn.Model\Linux.MVC.Learn.Model.csproj">
+      <Project>{9d21f6c9-8457-4732-92a6-9b51cd78d164}</Project>
+      <Name>Linux.MVC.Learn.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.11.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>47187</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:47187/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
